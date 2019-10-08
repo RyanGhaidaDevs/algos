@@ -48,3 +48,4 @@ Can you have an algorithim without data structure?
 or a data structure without an algorithim? 
   -> Not realy, because you need an algorithim to create the data structure and another algorithim to produce some sore of result, no point in having a data structure that doesnt produce some sort of result
 
+Fibonacci Formula is (1.618^N)sqrt(5) which is less than 2^n i.e. exponential and does grow faster than polynomial functions 
