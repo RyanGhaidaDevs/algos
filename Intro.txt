@@ -1,0 +1,22 @@
+Chapter 1: Algorithim Basics 
+
+Algorithim defiens the steps for performing a task in a certain way. 
+
+Appraoch and things to keep in considertation: 
+  -   Behavior
+  -   Speed
+  -   Memory Requirements
+  -   Techniques utilized 
+
+Data type of a list is similar to a self-expanding array, unlike arrays, lists allow you to add and remove items from any position. 
+
+A good algorithim must have three features: correctness, maintainability, efficiency. 
+
+-----------
+Big O notation: 
+
+a function to describe how the alogorithim's worst-case-performance relates to the problem as the problem size as the size approaches infinity. 
+This is know as a programs ASYMPTOTIC PERFORMACE 
+O(N^2) is pronounced "O of N squared" 
+
+5 baisc rules for calculating an algorithims Big O notation 
