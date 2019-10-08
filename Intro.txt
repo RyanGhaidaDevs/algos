@@ -20,3 +20,31 @@ This is know as a programs ASYMPTOTIC PERFORMACE
 O(N^2) is pronounced "O of N squared" 
 
 5 baisc rules for calculating an algorithims Big O notation 
+  1.  If an algorithim performs a certain sequence of steps f(N) times for a mathematical function, it takes O(f(N)) steps 
+  2.  If an algorithim performs an opertation that takes O(f(N)) steps and then performs a second oerptaion  that takes O(g(N)) steps for functions f and g, 
+  the algorithims total performance is O(f(N)+g(N))
+  3. If an algorithim take O(f(N) + g(N)) and the function f(N) is greater than g(N) for large N, the algorthims performace can be simplified to O(f(N))
+  4. If an algorithim performs an operation that takes O(f(N)) steps, and for every step in the opertaion it performs anohter O(g(N)) steps, the algorithim's total performance is 
+  O(f(N)*g(N))
+  5. Ignore constant multiples. If C is a constant, O(C*f(N)) is the same as O(f(N)) and same goes with O(f(C*N)) ~ O(f(N))
+-----------
+O(log N) -> typically divides the number of items it must consider by a fixed fraction at every step. 
+-----------
+Some things to know about trees, more deatails coming in later chapters
+
+sorted-complete-binary-tree 
+
+binary tree: every node has at most two branches 
+complete tree: every level (excpet possibly the last) is completely full and all the nodes in the last level are grouped on the left side. 
+sorted tree: every node's value is at least as large its left child and no larger than its right child. 
+full complete tree: every node having exactly 0 or 2 children, the bottom level would hold exactly half the trees nodes. 
+"How high is the tree?" : a full complete binary tree of height H has 2^(H+1) - 1 nodes 
+"given Nodes, how high is the tree?" a full complete binary tree with N nodes has height = log2(N+1) -1  
+-----------
+"null" : this variable doesnt point to anything
+----------- 
+Can you have an algorithim without data structure? 
+  ->  Yes an algorithim is just a series of steps
+or a data structure without an algorithim? 
+  -> Not realy, because you need an algorithim to create the data structure and another algorithim to produce some sore of result, no point in having a data structure that doesnt produce some sort of result
+
