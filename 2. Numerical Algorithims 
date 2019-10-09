@@ -1,0 +1,28 @@
+Numerical integration ( numeric quadrature) is the process of using numerical techniques to approxiamte the area under a curve defined by a function. 
+
+
+Even if you cant find the functions anti-derivative and cant neccesarily use Calculus to approximate area, you can still use numerical intergration. 
+
+Namely, Newton-Cotes formulas: retangle rule, trapezoid rule. 
+
+-------------
+Rectangle Rule 
+
+uses a series of rectangles w/ uniform width to approximate the are under a curve. 
+
+Trapezoid Rule 
+
+Used to make a better estimation than what the rectangle rule can give us. 
+-------------- 
+Adaptive quadrature
+
+in which the program detects areas where its approximation methods may produce large erros and refines its method in those areas.
+
+--------------
+Monte Carlo Integration 
+
+a form of numeric integration in which a program genreates a series of pseudorandom points unifomrly within the area and determines whether each point lies within the target region
+--------------
+Finding Zeros 
+
+given a function y =f(x) when we find x where y = 0 aka crosses x-axis, this is called the 'root'
