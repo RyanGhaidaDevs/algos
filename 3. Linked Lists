@@ -33,3 +33,66 @@ make the last cell's link point to the new_cell and then sets the new_cells link
 O(N)
 --------------
 Inserting cells after other cells 
+
+assume you have varible named after_me that points to the cell after which you want to insert the item. 
+
+make new cell's link point to the cell that follows after_me and then makes after_me's link point to the new_cell. 
+O(1) to mkae the actual change but O(N) to find the variable after_me 
+
+--------------- 
+Deleting cells 
+
+simply set the previous cell's link to the cell that follows the target cell, so that you 'skip' over the cell that you want to delete. 
+
+depeneding on the language you may need to explicitly free up memory for the cells you've deleted. 
+---------------
+Doubly linked lists 
+
+In doubly linked lists cells have links that point to both the next and previous cells in the list. 
+The link in the previous cell is often called Prev or Previous. 
+
+Often its convenient to have both top and bottom sentinels for doubly linked lists so the program can manipulate either side. 
+
+Althougb similar to singly linked lists we need to be extra careful about relabeling the previous links as well. 
+                   [new_cell]
+[]  []  [after_me] 'insert here' [] [] 
+// update Next links
+new_cell.Next = after_me.Next 
+after_me.Next = new_cell 
+
+// update previous links
+new_cell.Next.Prev = new_cell
+new_cell.Prev = after_me
+
+---------------
+Sorted Linked Lists && Linked list algorithims
+
+Copying Lists
+
+InsertionSort O(N^2) works for small lists but not large ones, also works for singlyLinked Lists 
+SelectionSort O(N^2)
+---------------
+Multithreaded Linked Lists 
+
+You can have links that point to other cells based on differnt paramters as opposed to just order, for example if you ahve a linked list of planets 
+you can have links for order, mass,  distance etc. Now our linked lists has mutliple types of links, each wither thier own order. 
+
+----------------
+Linked lists with loops 
+
+a circuluar linked list is a linked list in which the last link points back to the first item in the list. 
+
+you can have a linked list with a loop in whcih the loop doestn include all the cells, think of a game loop 
+
+how to tell if a list has a  loop ? 
+
+Marking Cells 
+traverse the list and amrking each as you visit, if you come to a cell that is already marked, you know that the list as a loop. 
+
+Algorithim must traverse the loop twice - once to mark the cells as ' Visited ' and a second time to reset them to false. O(2N) -> O(N) 
+----------------
+What if we cant alter the data we are traversing? 
+
+Hash Table! 
+
+
