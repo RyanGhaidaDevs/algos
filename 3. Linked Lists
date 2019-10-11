@@ -108,4 +108,15 @@ If the cells before the two objects are differnt, then the list contains a loop.
 
 This is slower but requires no additional space
 
+Is there a way to do this without needing extra space and or complexity? Yes! 
+
+---------------
+List Reversal 
+An algorithim can detect a loop by reversing the links in a linked list
+
+This algorithim calls the ReverseList Method to reverse the list and get the reversed lists first cell.  It then calls ReverseList again to re-reverse the list and restore the links to their original values
+If the sentinel is the same as the first cell in the reversed list, the algorithim returns true. If the sentinel is different from the first cell in the reverse list then the algorithim returns false.
+
+Teh algorithim traverses the list twice so it performs 2* O(N) which is siplified to O(N) as N -> infinity.
+
 
