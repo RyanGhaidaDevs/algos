@@ -128,6 +128,49 @@ Tortoise and Hare / Floyd's cycle-finding algorithim
 When the tortoise's Next pointer points at the hare, this is the end of the loop.
 
 --------------
+Summary && Exercises 
+
+Write an algorithim to find the largest item in a 'singly linked list' 
+-> set first value equal to a variable 'best' 
+-> Traverse array and check to see if an new_values are > 'best' if so redefine 'best' else continue untill end. 
+pseduocode: 
+
+if(top.Next == null) Return null //check if empty
+
+//move to first cell that has data
+top = top.Next 
+
+//Save this cell and its value
+best_cell = top 
+best_value = best_cell.value
+
+//move to next cell 
+top = top.Next 
+
+//check other cells 
+While(top != null)
+  //check to see if value is larger
+  if(top.Value > best_value)
+    best_cell = top 
+    best_value = top.value 
+  End if 
+
+  //move to next cell 
+  top = top.Next 
+End While 
+return best_value
+end 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
