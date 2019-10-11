@@ -94,5 +94,18 @@ Algorithim must traverse the loop twice - once to mark the cells as ' Visited ' 
 What if we cant alter the data we are traversing? 
 
 Hash Table! 
+Hash table can very quickly store items, retrieve items, and tell you if the item is present in the hash table. 
+
+Hash table should have 1.5XN space for N values. 
+
+Hash Table will detect loops without altering them but requires extra storage. 
+how can we do this wihtout requiring extra storage? 
+---------------
+List Retracting 
+
+this algorithim makes an object traverse the list, for each cell visited, the algorithim makes a second object traverse the list untill it finds the first object. 
+If the cells before the two objects are differnt, then the list contains a loop. O(N^2)
+
+This is slower but requires no additional space
 
 
