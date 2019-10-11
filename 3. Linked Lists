@@ -1,0 +1,35 @@
+Linked list is built of objects that are often called cells. These cells contains whatever data the list must store plus a link to another cell. 
+The link is simply a refrence or pointer to another object of a cell's class. Often the pointer field in the cell class is called Next. 
+
+------------
+Singly Linked Lists 
+
+each cell is connected to the following cell by a single link. 
+
+To use a linked list, you need a set of algorithims for:
+- iterating over a list 
+- finding items in the list 
+- removing items 
+- adding items 
+
+What is a sentinel? 
+
+A sentinel is a cell that is part of the linked list but that doesn't contain any meaningfull data. It is only used as a placeholder so that algorithims can refer to a cell that comes before the first cell. 
+-------------
+Adding cells to the beggining 
+
+place a new_cell at the beggining right after the sentinel.
+
+set the new_cell's Next pointer so that it points to the first cell in the list after the sentinel. 
+then set the sentinel's Next pointer to the new_cell 
+
+O(1)
+-------------
+Adding cell at the end
+
+travese entire linked_list untill Top points to nil (aka end of list)
+make the last cell's link point to the new_cell and then sets the new_cells link to point to null 
+
+O(N)
+--------------
+Inserting cells after other cells 
