@@ -160,6 +160,31 @@ While(top != null)
 End While 
 return best_value
 end 
+---------------
+Add a value to the top of a doubly linked list 
+AddAtBeginning(Cell: top, Cell: new_cell)
+//Update next Links 
+  new_cell.next = top.Next 
+  top.Next = new_cell 
+
+  //Update Prev Links 
+  new_cell.Next.Prev = new_cell
+  new_cell.Prev = top 
+End AddAtBeginning
+----------------
+Add a value to the bottom of a doubly linked list
+
+AddAtEnd(Cell: bottom, Cell: new_cell)
+
+//Update Prev links
+new_cell.Prev = bottom.Prev 
+bottom.Prev = new_cell 
+
+//Update next links 
+new_cell.Prev.Next = new_cell 
+new_cell.Next = bottom
+end AddAtEnd 
+----------------
 
 
 
