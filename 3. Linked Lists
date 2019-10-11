@@ -118,5 +118,16 @@ This algorithim calls the ReverseList Method to reverse the list and get the rev
 If the sentinel is the same as the first cell in the reversed list, the algorithim returns true. If the sentinel is different from the first cell in the reverse list then the algorithim returns false.
 
 Teh algorithim traverses the list twice so it performs 2* O(N) which is siplified to O(N) as N -> infinity.
+-------------- 
+Tortoise and Hare / Floyd's cycle-finding algorithim 
+
+-Start the tortoise moving through the list at one cell per step, start the hare at the begginging but moving two cells per step.
+- If the hare finds a null value that means no loop, exit algorithim. 
+- Otherwise, when the hare catches the tortoise, restart the hare at the beggining of the list , moving one cell per step and continue moving the ahre one cell per step
+- When the tortoise and hare meet again, they are at the start of the loop. Leave the hare there and allow the tortoise to to take one lap around the loop. 
+When the tortoise's Next pointer points at the hare, this is the end of the loop.
+
+--------------
+
 
 
