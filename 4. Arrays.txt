@@ -9,3 +9,8 @@ A method to save space in which the values above a diagonal have some default va
 [x][0][0][0][0]
 [x][x][0][0][0]
 [x][x][x][0][0]
+
+Sparse Array lets you save even mroe space by not representing the missing entries
+
+the rest of this setion gets into multi-dimensional arrays and their derivatives 
+Skipped this because I dont think Ill get questions on such nuance.
