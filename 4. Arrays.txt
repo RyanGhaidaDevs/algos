@@ -1,0 +1,11 @@
+An array is a chunk of continguous memeory that a program can access by using indices
+
+
+One-dimensional Arrays
+Also called linear arrays. 
+Triangular Arrays 
+A method to save space in which the values above a diagonal have some default value like null or 0. 
+
+[x][0][0][0][0]
+[x][x][0][0][0]
+[x][x][x][0][0]
