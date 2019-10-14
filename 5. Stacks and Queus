@@ -1,0 +1,6 @@
+Simple data structures that store objects either in first-in-first-out or last-in-last-out
+
+Stacks
+
+data structure that where items are added and removed in last-in-first-out-order. LIFO "life-oh"
+Similar to a stack of books on a desk
