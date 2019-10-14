@@ -4,3 +4,22 @@ Stacks
 
 data structure that where items are added and removed in last-in-first-out-order. LIFO "life-oh"
 Similar to a stack of books on a desk
+sometimes called a `pushdown-stack`
+Push() to add 
+Pop() to remove
+
+------------
+Linked-List Stacks
+pushing a value into a linked list stack
+
+Push(Cell: sentinel, Data:new_value)
+//Make a cell to hold new new_value
+Cell: new_cell = New Cell 
+new_cell.Value = new_value
+
+//Add new cell to linked List
+new_cell.Next = sentinel.Next
+sentinel.Next = new_cell 
+end Push
+
+--------------
