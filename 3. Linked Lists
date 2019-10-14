@@ -196,6 +196,34 @@ target_cell.Prev.Next = target_cell.Next
 
 End DeleteCell
 
+[] <-> [T] <-> []
+[] <-> []
+
+---------------
+Suppose you have a sorted doubly-linked list. Can you think of a way to imporve search performance by starting the search from the bottom sentinel instead of the Top sentinel? Does that change the Big(O) runtime? 
+
+We can check to see the first letter for the search term, if above mid letter than start with Bottom else Top. 
+Will not change runtime significanly, O(1/2N) ~ O(N)
+
+----------------
+Write an algorithim for inserting an item in a sorted doubly linked list where the Top and Bottom Sentinels are the Min and Max values respectively.
+
+InsertItem(Cell: top, Cell: new_cell )
+  //Find the cell before where the new cell belongs.
+While(top.Next.Value < new_cell.value)
+  top = top.Next 
+end While 
+
+//Update Next Links - at this point top is right before 
+new_cell.Next = top.Next 
+top.Next = new_cell
+
+//Update Prev Links 
+new_cell.Next.Prev = new_cell
+new_cell.prev = top 
+end InsertItem
+
+
 
 
 
