@@ -185,7 +185,16 @@ new_cell.Prev.Next = new_cell
 new_cell.Next = bottom
 end AddAtEnd 
 ----------------
+Write an algorithim that deletes a specified cell from a doubly linked list
 
+DeleteCell(Cell: target_cell)
+// Update the next cell's Prev link
+target_cell.Next.Prev = target_cell.Prev 
+
+//Update next cell Next Link 
+target_cell.Prev.Next = target_cell.Next 
+
+End DeleteCell
 
 
 
