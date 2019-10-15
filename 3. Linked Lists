@@ -223,6 +223,10 @@ new_cell.Next.Prev = new_cell
 new_cell.prev = top 
 end InsertItem
 
+----------------
+RESOURCES 
+
+linked lists in js: https://codeburst.io/linked-lists-in-javascript-es6-code-part-1-6dd349c3dcc3
 
 
 
