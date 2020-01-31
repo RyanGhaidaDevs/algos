@@ -40,6 +40,7 @@ class DoublyLinkedList {
   insertBefore(node, nodeToInsert) {
     //if nodeToInsert is the same as head and tail aka one value, return.
     if(nodeToInsert === this.head && nodeToInsert === this.tail) return;
+    //node to insert could be an existing node in list, just incase remove node. If its not then it will still have null for prev and next values of null. 
     this.remove(nodeToInsert);
     nodeToInsert.prev = node.prev;
     nodeToInsert.next = node;
@@ -65,7 +66,7 @@ class DoublyLinkedList {
     node.next = nodeToInsert;
   }
 
-  //O(p) time | O(1) space
+  //O(P) time | O(1) space P is position, so up to that position. 
   insertAtPosition(position, nodeToInsert){
     if(position === 1) {
       this.setHead(nodeToInsert);
@@ -106,6 +107,7 @@ class DoublyLinkedList {
   }
 
   removeNodeBindings(node){
+    //update node pointers AROUND the node to remove first before removing bindings. 
     if (node.prev !== null) node.prev.next = node.next;
     if (node.next !== null) node.next.prev = node.prev;
     node.prev = null; 
