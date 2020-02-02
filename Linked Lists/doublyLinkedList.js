@@ -8,8 +8,8 @@ class Node {
 
 class DoublyLinkedList {
   constructor(){
-    this.left = left;
-    this.right = right;
+    this.left = null;
+    this.right = null;
   }
 
   setHead(node){
@@ -23,7 +23,7 @@ class DoublyLinkedList {
 
   setTail(node){
     if(this.tail === null){
-      this.setHead(node);
+      this.setHead(node)
       return;
     }
     this.insertAfter(this.tail, node)
@@ -88,7 +88,7 @@ class DoublyLinkedList {
     if(node === this.head){
       this.head = this.head.next; 
     }
-    if(node === this.tail)){
+    if(node === this.tail){
       this.tail = this.tail.prev; 
     }
     this.removeNodeBindings(node);
@@ -104,3 +104,5 @@ class DoublyLinkedList {
   }
 
 }
+
+let list = new DoublyLinkedList
