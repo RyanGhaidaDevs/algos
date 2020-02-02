@@ -17,7 +17,7 @@ class DoublyLinkedList {
     console.log("node", node)
     if(this.head === null){
       this.head = node; 
-      this.tail = null; 
+      this.tail = node; 
       return;
     }
     this.insertBefore(this.head, node)
