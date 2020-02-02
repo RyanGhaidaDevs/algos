@@ -1,50 +1,43 @@
 class Node {
-  constructor(value) {
+  constructor(value){
     this.value = value; 
-    this.prev = null; 
-    this.next = null;
+    this.left = null;
+    this.right = null;
   }
 }
 
 class DoublyLinkedList {
   constructor(){
-    this.head = null; 
-    this.tail = null; 
+    this.left = left;
+    this.right = right;
   }
 
-
-  //O(1) time | O(1) space
   setHead(node){
-    //if head is empty, and list does not exist make head and tail equal to node.
-    if (this.head === null) {
-      this.head = node;
-      this.tail = node;
+    if(this.head === null){
+      this.head = node; 
+      this.tail = null; 
       return;
     }
-    //else insert new head before old head.
-  this.insertBefore(this.head, node)
+    this.insertBefore(this.head, node)
   }
 
-  //O(1) time | O(1) space
-  setTail(node) {
-      //if tail is empty, and list does not exist make head and tail equal to node. user helper method.
-    if (this.tail === null) {
+  setTail(node){
+    if(this.tail === null){
       this.setHead(node);
-      return; 
+      return;
     }
-    //else insert new tail after old tail.
-    this.insertAfter(this.tail, node);
+    this.insertAfter(this.tail, node)
   }
 
-  //O(1) time | O(1) space
-  insertBefore(node, nodeToInsert) {
-    //if nodeToInsert is the same as head and tail aka one value, return.
-    if(nodeToInsert === this.head && nodeToInsert === this.tail) return;
-    //node to insert could be an existing node in list, just incase remove node. If its not then it will still have null for prev and next values of null. 
-    this.remove(nodeToInsert);
-    nodeToInsert.prev = node.prev;
+  insertBefore(node, nodeToInsert){
+    if(nodeToInsert === this.head && nodeToInsert === this.tail) return; 
+    //incase node to insert is already in the list itself. 
+    this.remove(nodeToInsert)
+
+    nodeToInsert.prev = node.prev; 
     nodeToInsert.next = node;
-    if(node.prev === null) {
+    //if node is head, update head
+    if(node.prev === null){
       this.head = nodeToInsert;
     } else {
       node.prev.next = nodeToInsert;
@@ -52,65 +45,62 @@ class DoublyLinkedList {
     node.prev = nodeToInsert;
   }
 
-  //O(1) time | O(1) space
   insertAfter(node, nodeToInsert){
-    if(nodeToInsert === head && nodeToInsert === this.tail) return; 
-    this.remove(nodeToInsert);
-    nodeToInsert.prev = node;
+    if(nodeToInsert === this.head && nodeToInsert === this.tail) return; 
+    this.remove(nodeToInsert)
+
+    nodeToInsert.prev = node; 
     nodeToInsert.next = node.next; 
-    if(node.next === null) {
-      this.tail = nodeToInsert;
+
+    if(node.next === null){
+      this.tail = nodeToInsert; 
     } else {
-      node.next.prev = nodeToInsert;
+      node.next.prev = nodeToInsert
     }
-    node.next = nodeToInsert;
+    node.next = nodeToInsert; 
   }
 
-  //O(P) time | O(1) space P is position, so up to that position. 
-  insertAtPosition(position, nodeToInsert){
-    if(position === 1) {
-      this.setHead(nodeToInsert);
-      return;
-    }
-    let node = this.head; 
-    let currentPosition = 1; 
-    while(node !== null && currentPosition++ !== position) node = node.next; 
-    if (node !== null) {
-      this.insertBefore(node, nodeToInsert);
-    } else {
-      this.setTail(nodeToInsert)
-    }
-  }
-
-  //O(n) time | O(1) space
-  removeNodesWithValue(value){
-    let node = this.head; 
+  removeNodeWithValue(value){
+    node = this.head; 
     while(node !== null){
+      //set temp variable so we can continue traversing list for other node === value. 
       const nodeToRemove = node; 
-      node = node.next; 
-      if(nodeToRemove.value === value) this.remove(nodeToRemove);
-    }
+      node = node.next
+      if(nodeToRemove.value === value) remove(nodeToRemove);
+    } 
   }
 
-  //O(1) time | O(1) space
-  remove(node) {
-    if(node === this.head) this.head = this.head.next;
-    if(node === this.tail) this.tail = this.tail.prev;
+
+  //O(N) time space because you have to traverse enitre list in worst case.
+  // O(1) space b/c your only doing setting once. 
+  containsNodeWithValue(value){
+    //return value is boolean. 
+    //start at the beggining of the list with our pointer.
+    node = this.head;
+    //while the node is not either at the end - null - nor the value itself, traverse down list.  
+    while(node !== null && node !== value) node = node.next; 
+    //true if anything not null 
+    return node !== null; 
+  }
+  //O(1) space because we setting in one step.  
+  //O(N) time because were not traversing the list.
+  remove(node){
+    if(node === this.head){
+      this.head = this.head.next; 
+    }
+    if(node === this.tail)){
+      this.tail = this.tail.prev; 
+    }
     this.removeNodeBindings(node);
   }
 
-  //O(n) time | O(1) space
-  containesNodeWithValue(value) {
-    let node = this.head; 
-    while(node !== null && node.value !== value) node = node.next;
-    return node !== null 
+  removeNodeBindings(node){
+    //if node is anything other than head or tail it will hit 
+    //these if statements. use node bindings before setting to null. 
+    if(node.prev !== null) node.prev.next = node.next;
+    if(node.next !== null) node.next.prev = node.prev;
+    node.next = null;
+    node.previous = null;
   }
 
-  removeNodeBindings(node){
-    //update node pointers AROUND the node to remove first before removing bindings. 
-    if (node.prev !== null) node.prev.next = node.next;
-    if (node.next !== null) node.next.prev = node.prev;
-    node.prev = null; 
-    node.next = null;
-  }
 }
