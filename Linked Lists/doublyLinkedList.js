@@ -8,11 +8,13 @@ class Node {
 
 class DoublyLinkedList {
   constructor(){
-    this.left = null;
-    this.right = null;
+    this.head = null;
+    this.tail = null;
   }
 
   setHead(node){
+    console.log("head", this.head)
+    console.log("node", node)
     if(this.head === null){
       this.head = node; 
       this.tail = null; 
@@ -106,3 +108,4 @@ class DoublyLinkedList {
 }
 
 let list = new DoublyLinkedList
+list.setHead(1)
