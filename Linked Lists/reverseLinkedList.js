@@ -19,7 +19,7 @@ function reverseLinkedList(head){
 //move p2 to the right to be p3. 
 //continue untill end. 
 
-
+ 
 
 
 
