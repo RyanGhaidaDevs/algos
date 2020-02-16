@@ -6,7 +6,7 @@
 // move second pointer to postion n ahead of first node.
 //move both pointers together untill second pointer passes tail, aka becomes null.
 //remove node at first pointer. 
-
+//Time O(N) | Space O(1)
 class LinkedList{
   constructor(){
     this.value = value; 
