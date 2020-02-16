@@ -2,6 +2,8 @@
 
 //strategy is to make two pointers and have one go twice as fast as the other and if at any point they collide then there is a loop. 
 
+
+//Time O(N) | Space O(1) 
 class LL {
   constructor(value){
     this.value = value; 
