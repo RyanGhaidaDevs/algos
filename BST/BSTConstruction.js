@@ -5,6 +5,7 @@ class BST{
     this.left = null; 
   }
 
+  //Space O(log(N)) | Time O(log(N))
   insert(value){
     if(value < this.value){
       if(this.left === null){
