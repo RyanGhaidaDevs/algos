@@ -142,7 +142,7 @@ class BST{
         currentNode = currentNode.right; 
       } else {
         if(currentNode.left !== null && currentNode.right !== null){
-          //get and setmin value from right subtree as this will satsify BST property
+          //get and set min value from right subtree as this will satsify BST property
           currentNode.value = currentNode.right.getMinValue();
           // find and remove the node that we replaced currentNode with;
           currentNode.right.remove(currentNode.value, currentNode)
