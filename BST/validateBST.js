@@ -11,7 +11,7 @@ class BST{
 
 //O(N) time and O(d) space where d is the depth of the BST
 function validateBST(tree){
-  return validatesBSTHelper(tree, -Infinity, Infintiy)
+  return validatesBSTHelper(tree, -Infinity, Infintiy);
 }
 
 function validateBSTHelper(tree, minVal, maxVal){
