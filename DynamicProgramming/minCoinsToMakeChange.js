@@ -16,3 +16,6 @@ function minCoinnToMakeChange(n, coins){
   }
   return minCoins[n] !== Ininity ? minCoins[n] : -1; 
 }
+
+//time O(nd) where d is the size of the coins array 
+//space O(n) because we need an array of atleast size n+1 ~ O(n) 
