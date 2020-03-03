@@ -14,3 +14,20 @@ function isPalindrome(string){
 //note: two arrays with the same values are not identical, thus we need to operate on them to return them to strings
 //otherwise we need to iterate through each array and compare values.
 
+
+
+//recursive solution
+
+//Space O(N) | Time O(N)
+function isPalindrome(string, i = 0){
+  //variable to traverse string from last char towards center.
+  const j = string.length - 1 - i;
+  console.log(i, j)
+  //compare until i is equal or greater than j, aka when the pointers cross in the center of the string.
+  //i >= j b/c string couls be even length or odd length and i will eventaull either === j or pass it. 
+  return i >= j ? true : string[i] === string[j] && isPalindrome(string, i+1)
+}
+
+//note: the strategy here is to traverse the string from the begginging and the end simulataneously and compare values.
+//i.e. string[i] === string[j] initially wiill be string[0] and string[6] if string.length === 6, 
+//then on the next iteration string[1] === string[5] etc. 
