@@ -31,3 +31,18 @@ function isPalindrome(string, i = 0){
 //note: the strategy here is to traverse the string from the begginging and the end simulataneously and compare values.
 //i.e. string[i] === string[j] initially wiill be string[0] and string[6] if string.length === 6, 
 //then on the next iteration string[1] === string[5] etc. 
+
+
+// optimal iterative solution
+//create left and right index to traverse string from left and right simultaneously.
+//initialize while loops so that while left < right we compare values of string and iterate left and right respectively. 
+function isPalindrome(string){
+  let leftIdx = 0;
+  let rightIdx = string.length - 1;
+  while(leftIdx < rightIdx) {
+    if(string[leftIdx] !== string[rightIdx]) return false; 
+    leftIdx++; 
+    rightIdx--;
+  }
+  return true;
+}
