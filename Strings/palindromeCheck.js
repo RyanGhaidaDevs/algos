@@ -36,6 +36,7 @@ function isPalindrome(string, i = 0){
 // optimal iterative solution
 //create left and right index to traverse string from left and right simultaneously.
 //initialize while loops so that while left < right we compare values of string and iterate left and right respectively. 
+
 function isPalindrome(string){
   let leftIdx = 0;
   let rightIdx = string.length - 1;
