@@ -10,3 +10,7 @@ function isPalindrome(string){
 
   return arr1 === arr2 ? true : false;
 }
+
+//note: two arrays with the same values are not identical, thus we need to operate on them to return them to strings
+//otherwise we need to iterate through each array and compare values.
+
