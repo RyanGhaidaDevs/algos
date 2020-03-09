@@ -6,3 +6,4 @@
 //initially I was thinking to make a LL of all the alphabet letters
 // Having the LL be one giant loop in which z -> a
 //creating a traverse method for the LL and just having that initiate a loop that will iterate the pointers for each letter by the set amount of the key. 
+
